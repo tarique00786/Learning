@@ -5,6 +5,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
+  Checkbox,
 } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 
@@ -27,15 +28,27 @@ export default function Expand() {
 
   return (
     <>
-      <h2>React Fetch API Example</h2>
+      <h2>Assignment3</h2>
       <Accordion>
         <AccordionSummary>
-          <Typography>This is the summary</Typography>
+          <Typography>Lead source</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {Users.map((item, i) => {
-            return <Typography key={i}>{item.label}</Typography>;
-          })}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              textalign: "center",
+            }}
+          >
+            {Users.map((item, i) => {
+              return (
+                <checkbox>
+                  <Typography key={i}>{item.label}</Typography>
+                </checkbox>
+              );
+            })}
+          </div>
         </AccordionDetails>
       </Accordion>
     </>
